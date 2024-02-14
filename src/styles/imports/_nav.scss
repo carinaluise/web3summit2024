@@ -1,0 +1,17 @@
+.nav {
+  ul {
+    margin-top: $margin;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

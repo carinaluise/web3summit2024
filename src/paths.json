@@ -1,0 +1,22 @@
+{
+  "paths": [
+    {
+      "title": "Home",
+      "path": "/"
+    }
+  ],
+  "imprint": [
+    {
+      "title": "Imprint",
+      "path": "/imprint/"
+    },
+    {
+      "title": "Terms And Conditions",
+      "path": "/terms-and-conditions/"
+    },
+    {
+      "title": "Privacy Policy",
+      "path": "/privacy-policy/"
+    }
+  ]
+}

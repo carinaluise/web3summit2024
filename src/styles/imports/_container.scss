@@ -1,0 +1,7 @@
+.grid-container {
+  @media (min-width: $size-md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap-width;
+  }
+}
