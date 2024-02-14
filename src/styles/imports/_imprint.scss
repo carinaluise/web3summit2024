@@ -1,0 +1,114 @@
+.imprint {
+  article {
+    margin-bottom: $margin;
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin-top: $margin;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-weight: normal;
+    display: inline;
+    margin-bottom: 0;
+  }
+}
+
+.terms-and-conditions,
+.privacy {
+  header {
+    margin-bottom: 0;
+  }
+
+  nav {
+    li {
+      margin: 0;
+    }
+  }
+
+  address {
+    font-style: normal;
+    margin: $margin 0;
+  }
+
+  ol {
+    padding: 0;
+    margin: $margin 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin: $margin 0;
+  }
+
+  h2,
+  h3 {
+    margin: $margin 0;
+  }
+
+  .item {
+    ol {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: $margin 0;
+        li {
+          margin: 0;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    &__title {
+      font-weight: bold;
+
+      h2 {
+        display: inline;
+      }
+
+      margin-bottom: $margin;
+    }
+
+    &__contact {
+      margin: $margin 0;
+
+      h3 {
+        display: inline;
+        margin-bottom: 0;
+      }
+
+      address {
+        margin: 0;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.privacy {
+  &__contents {
+    p:first-child {
+      margin: 0;
+    }
+  }
+}

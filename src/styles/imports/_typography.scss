@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "SuisseIntlMono";
+  src: url("/fonts/SuisseIntlMono-Regular-WebS.woff2") format("woff2"),
+    url("/fonts/SuisseIntlMono-Regular-WebS.woff") format("woff"),
+    url("/fonts/SuisseIntlMono-Regular-WebS.ttf") format("tff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntlMono";
+  src: url("/fonts/SuisseIntlMono-Bold-WebS.woff2") format("woff2"),
+    url("/fonts/SuisseIntlMono-Bold-WebS.woff") format("woff"),
+    url("/fonts/SuisseIntlMono-Bold-WebS.ttf") format("tff");
+  font-weight: bold;
+}
