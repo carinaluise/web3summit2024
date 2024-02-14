@@ -1,0 +1,89 @@
+/* Animation Styles */
+
+.animation__wrapper {
+  position: relative;
+
+  &--reverse {
+    @media (min-width: $size-md) {
+      transform: scaleX(-1);
+    }
+  }
+
+  &--middle {
+    @media (min-width: $size-md) {
+      display: flex;
+      justify-content: center;
+      left: 7px;
+    }
+  }
+}
+
+.animation {
+  position: relative;
+  background-size: 21px;
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+
+  &--fixed {
+    @media (min-width: $size-md) {
+      position: fixed;
+      top: 22px;
+      right: 8px;
+      bottom: 22px;
+    }
+  }
+
+  &--home {
+    visibility: visible;
+
+    @media (min-width: $size-md) {
+      position: absolute;
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: 0px) {
+        position: absolute;
+        top: 0px;
+      }
+    }
+  }
+
+  &--ready {
+    visibility: visible;
+  }
+
+  &--finished {
+    background-image: url("/images/block-21x21.png");
+  }
+
+  &--click {
+    cursor: pointer;
+  }
+
+  &__block {
+    height: 21px;
+    background-size: 21px;
+    line-height: 21px;
+    background-color: transparent;
+    margin: 0;
+    float: left;
+
+    &--hidden {
+      background-image: url("/images/block-21x21.png");
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    background-color: black;
+    width: 7px;
+    height: 7px;
+    visibility: hidden;
+
+    &--visible {
+      visibility: visible;
+    }
+  }
+}
