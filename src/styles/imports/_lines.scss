@@ -1,0 +1,7 @@
+.canvas-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - $padding-lg * 2);
+  z-index: 1;
+}
