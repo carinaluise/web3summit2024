@@ -1,12 +1,9 @@
 import * as React from "react";
 import Layout from "../../components/Layout";
-import SiteNavigation from "../../paths.json";
-import NavBar from "../../components/NavBar";
 
 const ImprintPage = () => {
   return (
-    <Layout page={"imprint"} title="Imprint">
-      <NavBar subNav paths={SiteNavigation.imprint} />
+    <Layout title="Imprint">
       <article>
         <h2>
           Information provided according to Sec. 5 German Telemedia Act (TMG):

@@ -1,12 +1,9 @@
 import * as React from "react";
 import Layout from "../../components/Layout";
-import SiteNavigation from "../../paths.json";
-import NavBar from "../../components/NavBar";
 
 const TermsAndConditions = () => {
   return (
-    <Layout page="terms-and-conditions" title="Terms & Conditions">
-      <NavBar subNav paths={SiteNavigation.imprint} />
+    <Layout title="Terms & Conditions">
       <article>
         <header>
           <h2>General Terms & Conditions of</h2>

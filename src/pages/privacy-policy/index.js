@@ -1,12 +1,9 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import SiteNavigation from "../../paths.json";
-import NavBar from "../../components/NavBar";
 
 const PrivacyPolicy = () => {
   return (
-    <Layout page="privacy" title="Privacy Policy">
-      <NavBar subNav paths={SiteNavigation.imprint} />
+    <Layout title="Privacy Policy">
       <article>
         <header>
           <p>
