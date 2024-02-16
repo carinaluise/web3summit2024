@@ -1,0 +1,22 @@
+.home {
+  &__title {
+    z-index: 2;
+    max-width: 50vw;
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 3rem;
+    color: $color-subtext;
+  }
+
+  &__title-container {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    padding-left: 2rem;
+    background: white;
+    display: inline-block;
+    line-height: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
