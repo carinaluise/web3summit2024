@@ -1,40 +1,14 @@
 .site {
-  @media (min-width: $size-md) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: $gap-width;
-
-    main {
-      padding-right: $padding-lg;
-    }
-  }
-
+  padding: $padding-lg;
   height: 100vh;
-  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
   main {
-    padding-bottom: $padding-lg;
-    nav {
-      ul {
-        margin: 0 0 $margin 0;
-      }
-    }
-  }
-
-  header {
-    margin-bottom: $margin-lg;
-  }
-
-  footer {
-    padding: $padding 0;
-
-    @media (min-width: $size-md) {
-      position: fixed;
-      bottom: $gap-width;
-      left: $gap-width;
-      margin: 0;
-      padding: 0;
-    }
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    align-content: center;
   }
 }

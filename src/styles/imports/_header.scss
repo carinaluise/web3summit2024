@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: lighter;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &__date,
+  &__location {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: $color-subtext;
+  }
+
+  &__title {
+    mix-blend-mode: difference;
+    margin-top: 0;
+  }
+
+  &__cta {
+    display: flex;
+    gap: 2rem;
+    justify-items: top;
+    line-height: 2rem;
+    p {
+      color: $color-subtext;
+    }
+
+    a {
+      color: $color-anchor;
+      text-decoration: underline;
+      &:hover {
+        color: $color-text;
+      }
+    }
+  }
+}
