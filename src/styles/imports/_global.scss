@@ -8,12 +8,23 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: $font-size;
   line-height: $line-height;
-  margin: 0;
+  background-color: black;
+  // height: 100vh;
+}
+
+
+body, html {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  // overflow-x: hidden;
 }
 
 a {
@@ -22,31 +33,11 @@ a {
   word-break: break-all;
 }
 
-h2 {
-  font-weight: bold;
-}
-
-h1,
-h2,
 h3,
 h4,
 p {
   margin: 0;
   margin-bottom: $margin;
   font-size: $font-size;
-}
-
-header {
-  h1,
-  p {
-    margin-bottom: 0;
-  }
-}
-
-img {
-  margin-bottom: $margin;
-}
-
-[aria-current="page"] {
-  font-weight: bold;
+  color: $color-text;
 }

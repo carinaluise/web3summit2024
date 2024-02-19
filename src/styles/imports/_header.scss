@@ -1,0 +1,30 @@
+.header {
+  @media screen and (min-width: $size-md) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &__date,
+  &__location {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: normal;
+    color: $color-subtext;
+  }
+
+  &__title {
+    mix-blend-mode: difference;
+    margin-top: 0;
+  }
+}

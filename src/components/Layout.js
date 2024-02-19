@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "gatsby";
 import Header from "./Header";
-import Animation from "./Animation";
+import Footer from "./Footer";
 
 const Layout = ({ title, children }) => {
   return (
@@ -12,10 +11,7 @@ const Layout = ({ title, children }) => {
       </Helmet>
       <Header />
       <main>{children}</main>
-      <Animation />
-      <footer>
-        <Link to="/imprint/">Imprint</Link>
-      </footer>
+      <Footer />
     </div>
   );
 };
