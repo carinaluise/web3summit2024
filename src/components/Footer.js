@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <a href="/">Imprint</a>
-      <span>-</span>
+      <span>&mdash;</span>
       <a href="/">Privacy Policy</a>
     </footer>
   );

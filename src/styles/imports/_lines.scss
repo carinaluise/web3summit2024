@@ -1,19 +1,42 @@
 .canvas-container {
   position: absolute;
-  display: flex;
-  z-index: 1;
-  object-fit: contain;
-  scale: 0.8;
-  max-width: 100%;
-  overflow: hidden;
-  left: -50vw;
 
+  z-index: 1;
+  overflow: hidden;
+  width: 100vw;
+  left: 0;
+  text-align: center;
+  
+  
   @media screen and (min-width: $size-md) {
-    justify-content: center;
-    left: 20vh;
-    top: 40vh;
+    //
+  }
+  
+  
+  @media screen and (min-width: $size-xs) {
+    //
+  }
+  
+  @media screen and (min-width: $size-sm) {
+    scale: 0.9;
+    max-width: none;
+    padding: 0;
+    width: 100vw;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 44%;
+    top: 46.5%;
+    overflow: visible
+    ;
   }
 }
 
 canvas {
+  scale: 0.6;
+  transform: translate( -80%, -20%);
+  
+  @media screen and (min-width: $size-sm) {
+    scale: 1;
+    transform: none;
+  }
 }

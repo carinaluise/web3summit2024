@@ -5,49 +5,71 @@
       margin-top: 0;
     }
   }
+
+  &__title-container {
+    margin: 0 auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    align-items: center;
+    padding: 2rem 2rem;
+    
+    
+    
+    @media screen and (min-width: $size-xs) {
+      max-width: 35rem;
+    }
+    
+    @media screen and (min-width: $size-sm) {
+      max-width: none;
+      padding: 0;
+      width: 45rem;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 44%;
+    }
+    
+    @media screen and (min-width: $size-md) {
+      //
+    }
+    
+    @media screen and (min-width: $size-lg) {
+      //
+    }
+  }
+
   &__title {
-    z-index: -10;
-    font-weight: lighter;
+    font-weight: normal;
     color: $color-subtext;
     padding-left: 0;
-    line-height: 2.5rem;
-    font-size: 1.2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    
+    @media screen and (min-width: $size-xs) {
+      line-height: 2.5rem;
+      font-size: 1.5rem;
+    }
 
     @media screen and (min-width: $size-sm) {
-      line-height: 3rem;
+      line-height: 2.6rem;
       font-size: 2rem;
-      padding-left: 4rem;
       margin: 0 auto;
     }
   }
 
-  &__title-container {
-    margin: 0 auto;
-    background: white;
-    background-clip: text;
-    -webkit-background-clip: text;
-    max-width: 30ch;
-    display: flex;
-    align-items: center;
-
-    @media screen and (min-width: $size-sm) {
-      max-width: 65ch;
-    }
-
-    @media screen and (min-width: $size-md) {
-      max-width: 80ch;
-    }
-
-    @media screen and (min-width: $size-lg) {
-      max-width: 90ch;
-    }
-  }
+  
 
   &__cta {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 5rem auto;
+    font-size: 1rem;
+    line-height: 1.2rem;
+
+    max-width: 14rem;
+    border-bottom: solid 1px $color-subtext;
+    padding-bottom: 5rem;
 
     p {
       color: $color-subtext;
@@ -55,17 +77,22 @@
 
     @media screen and (min-width: $size-sm) {
       flex-direction: row;
-      gap: 4rem;
+      gap: 2rem;
       position: absolute;
       margin: 0;
       right: $margin-lg;
       top: $margin-lg;
+      max-width: none;
+      border-bottom: none;
+      padding-bottom: 0;
+
     }
 
     a {
       display: block;
       text-decoration: underline;
       margin: 0.5rem 1rem;
+      text-align: left;
 
       @media screen and (min-width: $size-sm) {
         margin: 0;
