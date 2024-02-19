@@ -15,12 +15,6 @@ const Header = () => {
         <p className="header__date">AUGUST 19-21</p>
         <p className="header__location">AMSTERDAM</p>
       </article>
-      <article className="header__cta">
-        <p>
-          <a href="/">Sign up</a>
-        </p>
-        <a href="/">Submissions</a>
-      </article>
     </header>
   );
 };

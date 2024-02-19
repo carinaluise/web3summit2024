@@ -1,7 +1,19 @@
 .canvas-container {
   position: absolute;
   display: flex;
-  justify-content: center;
-  width: calc(100% - $padding-lg * 2);
   z-index: 1;
+  object-fit: contain;
+  scale: 0.8;
+  max-width: 100%;
+  overflow: hidden;
+  left: -50vw;
+
+  @media screen and (min-width: $size-md) {
+    justify-content: center;
+    left: 20vh;
+    top: 40vh;
+  }
+}
+
+canvas {
 }

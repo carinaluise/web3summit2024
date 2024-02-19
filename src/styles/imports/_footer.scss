@@ -1,12 +1,29 @@
 .footer {
   text-align: center;
+  padding-bottom: 4rem;
+
+  @media screen and (min-width: $size-sm) {
+    padding-bottom: 0rem;
+  }
 
   a {
     color: $color-subtext;
     text-decoration: underline;
+    display: block;
+    margin: 2rem auto;
+
+    @media screen and (min-width: $size-sm) {
+      display: inline;
+      margin: 0 1rem;
+    }
   }
 
   span {
     color: $color-subtext;
+    display: none;
+
+    @media screen and (min-width: $size-sm) {
+      display: inline;
+    }
   }
 }

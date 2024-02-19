@@ -1,22 +1,75 @@
 .home {
+  &__hero {
+    margin-top: 10vh;
+    @media screen and (min-width: $size-md) {
+      margin-top: 0;
+    }
+  }
   &__title {
-    z-index: 2;
-    max-width: 50vw;
-    font-size: 2rem;
+    z-index: -10;
     font-weight: lighter;
-    line-height: 3rem;
     color: $color-subtext;
+    padding-left: 0;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+
+    @media screen and (min-width: $size-sm) {
+      line-height: 3rem;
+      font-size: 2rem;
+      padding-left: 4rem;
+      margin: 0 auto;
+    }
   }
 
   &__title-container {
-    position: relative;
     margin: 0 auto;
-    padding-bottom: 10vh;
-    padding-left: 2rem;
     background: white;
-    display: inline-block;
-    line-height: 0;
     background-clip: text;
     -webkit-background-clip: text;
+    max-width: 30ch;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $size-sm) {
+      max-width: 65ch;
+    }
+
+    @media screen and (min-width: $size-md) {
+      max-width: 80ch;
+    }
+
+    @media screen and (min-width: $size-lg) {
+      max-width: 90ch;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+
+    p {
+      color: $color-subtext;
+    }
+
+    @media screen and (min-width: $size-sm) {
+      flex-direction: row;
+      gap: 4rem;
+      position: absolute;
+      margin: 0;
+      right: $margin-lg;
+      top: $margin-lg;
+    }
+
+    a {
+      display: block;
+      text-decoration: underline;
+      margin: 0.5rem 1rem;
+
+      @media screen and (min-width: $size-sm) {
+        margin: 0;
+      }
+    }
   }
 }

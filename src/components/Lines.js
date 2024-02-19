@@ -7,6 +7,7 @@ const Lines = () => {
 
   const drawLines = (ctx) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
     lines.forEach(({ startX, startY, length, numLines }) => {
       for (let i = 0; i < numLines; i++) {
         const y = Math.round(startY + i * 5);
@@ -27,7 +28,7 @@ const Lines = () => {
 
       return [
         {
-          startX: 20,
+          startX: 100,
           startY: 130,
           length: random + 800,
           numLines: 5,
@@ -53,13 +54,13 @@ const Lines = () => {
         {
           startX: 200,
           startY: 220,
-          length: random + 800,
+          length: random + 500,
           numLines: 2,
         },
         {
           startX: 0,
           startY: 230,
-          length: random + 1000,
+          length: random + 500,
           numLines: 1,
         },
         {
@@ -81,7 +82,7 @@ const Lines = () => {
         setLines(generateLines());
         drawLines(ctx);
       }
-    }, 250);
+    }, 150);
 
     return () => clearInterval(interval);
   }, [isHovered]);
@@ -98,7 +99,7 @@ const Lines = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     drawLines(ctx);
-  }, [lines]);
+  });
 
   return (
     <div

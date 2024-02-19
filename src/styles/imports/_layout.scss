@@ -6,9 +6,12 @@
   align-items: stretch;
 
   main {
-    display: flex;
-    align-items: center;
     flex-grow: 1;
-    align-content: center;
+    @media screen and (min-width: $size-md) {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
   }
 }
