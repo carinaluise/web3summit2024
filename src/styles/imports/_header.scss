@@ -5,10 +5,10 @@
   }
 
   h1 {
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: lighter;
-    margin-bottom: 12px;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: normal;
+    margin-bottom: 0.8rem;
   }
 
   p {
@@ -17,9 +17,9 @@
 
   &__date,
   &__location {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: lighter;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: normal;
     color: $color-subtext;
   }
 

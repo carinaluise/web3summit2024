@@ -1,12 +1,17 @@
 .site {
-  padding: $padding-lg;
+  padding: $padding-sm;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  
+  @media screen and (min-width: $size-sm) {
+    padding: $padding-lg;
+  }
 
   main {
     flex-grow: 1;
+    
     @media screen and (min-width: $size-md) {
       display: flex;
       align-items: center;
