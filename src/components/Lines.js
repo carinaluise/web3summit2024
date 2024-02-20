@@ -55,7 +55,7 @@ const Lines = () => {
 
         return updatedLines;
       });
-    }, 500);
+    }, 5000);
   };
 
   const drawLines = (ctx) => {
