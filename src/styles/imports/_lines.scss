@@ -1,4 +1,4 @@
-.canvas-container {
+.svg-container {
   position: absolute;
   z-index: 1;
   overflow: hidden;
@@ -18,22 +18,21 @@
     scale: 0.9;
     max-width: none;
     padding: 0;
-    width: 100vw;
     position: fixed;
     transform: translate(-50%, -50%);
     left: 44%;
     top: 46.5%;
-    overflow: visible;
-    height: 400px;
   }
-}
+  img {
+    position: absolute;
+    left: 10vw;
+    opacity: 0.3;
+    margin: 0 auto;
+    transform: translate(-80%, -20%);
 
-canvas {
-  scale: 0.6;
-  transform: translate(-80%, -20%);
-
-  @media screen and (min-width: $size-sm) {
-    scale: 1;
-    transform: none;
+    @media screen and (min-width: $size-sm) {
+      scale: 1;
+      transform: none;
+    }
   }
 }

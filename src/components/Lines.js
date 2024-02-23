@@ -1,84 +1,32 @@
-import React, { useRef, useEffect, useState } from "react";
-import lineData from "../data/lineData";
+import React, { useEffect } from "react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import linesSVG from "../images/lines.svg";
 
 const Lines = () => {
-  const canvasRef = useRef(null);
-  const [lines, setLines] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const x = useMotionValue(200);
+  const y = useMotionValue(200);
 
   useEffect(() => {
-    setLines(lineData.map((line) => ({ ...line, isVisible: false })));
-  }, [setLines]);
+    const handleMouseMove = (e) => {
+      x.set(e.pageX);
+      y.set(e.pageY);
+    };
 
-  useEffect(() => {
-    const initialLoadInterval = startInitialLoadInterval();
-    const hideRandomLineInterval = startHideRandomLineInterval();
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      clearInterval(initialLoadInterval);
-      clearInterval(hideRandomLineInterval);
+      document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [lines, visibleCount]);
+  }, [x, y]);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-
-    drawLines(ctx);
-  }, [lines, visibleCount]);
-
-  const startInitialLoadInterval = () => {
-    return setInterval(() => {
-      setVisibleCount((prevCount) => {
-        if (prevCount < lines.length) {
-          const updatedLines = [...lines];
-          updatedLines[prevCount].isVisible = true;
-          setLines(updatedLines);
-          return prevCount + 1;
-        } else {
-          return prevCount;
-        }
-      });
-    }, 25 - 2 * visibleCount);
-  };
-
-  const startHideRandomLineInterval = () => {
-    return setInterval(() => {
-      setLines((prevLines) => {
-        const updatedLines = prevLines.map((line) => ({
-          ...line,
-          isVisible: true,
-        }));
-
-        const randomIndex = Math.floor(Math.random() * updatedLines.length);
-        updatedLines[randomIndex].isVisible = false;
-
-        return updatedLines;
-      });
-    }, 5000);
-  };
-
-  const drawLines = (ctx) => {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
-    lines
-      .slice(0, visibleCount)
-      .forEach(({ startX, startY, length, isVisible }) => {
-        if (isVisible) {
-          const y = Math.round(startY);
-          ctx.beginPath();
-          ctx.moveTo(startX, y);
-          ctx.lineTo(Math.round(startX + length), y);
-          ctx.strokeStyle = "white";
-          ctx.lineWidth = 0.6;
-          ctx.stroke();
-        }
-      });
-  };
+  const rotateX = useTransform(y, [0, 400], [-45, 45]);
+  const rotateY = useTransform(x, [0, 400], [-5, 5]);
 
   return (
-    <div className="canvas-container">
-      <canvas ref={canvasRef} width={1000} height={400} />
+    <div className="svg-container">
+      <motion.img style={{ rotateX, rotateY }} src={linesSVG} alt="" />
+      <motion.img src={linesSVG} alt="" />
+      <motion.img src={linesSVG} alt="" />
     </div>
   );
 };
