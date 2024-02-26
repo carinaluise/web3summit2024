@@ -2,7 +2,6 @@
   text-align: center;
   padding-bottom: 4rem;
   font-size: 0.7rem;
-  z-index: 10000;
 
   @media screen and (min-width: $size-sm) {
     padding-bottom: 0rem;
@@ -25,6 +24,26 @@
     display: none;
 
     @media screen and (min-width: $size-sm) {
+      display: inline;
+    }
+  }
+
+  &__web3summit {
+    display: inline;
+
+    a {
+      display: inline;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-left: 0.5rem;
+      }
+    }
+
+    span {
       display: inline;
     }
   }
