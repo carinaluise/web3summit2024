@@ -78,7 +78,6 @@
       border: none;
       color: $color-text;
       display: block;
-      text-decoration: underline;
       cursor: pointer;
       text-align: center;
       margin: 0.5rem 1rem;
@@ -86,6 +85,10 @@
       @media screen and (min-width: $size-sm) {
         margin: 0;
         text-align: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
       }
     }
 
@@ -103,12 +106,15 @@
 
     a {
       display: block;
-      text-decoration: underline;
       margin: 0.5rem 1rem;
       text-align: left;
 
       @media screen and (min-width: $size-sm) {
         margin: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
