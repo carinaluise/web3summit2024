@@ -73,6 +73,22 @@
       color: $color-subtext;
     }
 
+    button {
+      background: none;
+      border: none;
+      color: $color-text;
+      display: block;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+      margin: 0.5rem 1rem;
+
+      @media screen and (min-width: $size-sm) {
+        margin: 0;
+        text-align: none;
+      }
+    }
+
     @media screen and (min-width: $size-sm) {
       flex-direction: row;
       gap: 2rem;
