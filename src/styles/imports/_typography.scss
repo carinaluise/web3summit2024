@@ -1,15 +1,27 @@
 @font-face {
-  font-family: "SuisseIntlMono";
-  src: url("/fonts/SuisseIntlMono-Regular-WebS.woff2") format("woff2"),
-    url("/fonts/SuisseIntlMono-Regular-WebS.woff") format("woff"),
-    url("/fonts/SuisseIntlMono-Regular-WebS.ttf") format("tff");
+  font-family: "AkkuratMono";
+  src: url("/fonts/AkkuratMonoLLWeb-Italic.woff2") format("woff2"),
+    url("/fonts/AkkuratMonoLLWeb-Italic.woff") format("woff");
+  font-weight: italic;
+}
+
+@font-face {
+  font-family: "AkkuratMono";
+  src: url("/fonts/AkkuratMonoLLWeb-BoldItalic.woff2") format("woff2"),
+    url("/fonts/AkkuratMonoLLWeb-BoldItalic.woff") format("woff");
+  font-weight: bold italic;
+}
+
+@font-face {
+  font-family: "AkkuratMono";
+  src: url("/fonts/AkkuratMonoLLWeb-Regular.woff2") format("woff2"),
+    url("/fonts/AkkuratMonoLLWeb-Regular.woff") format("woff");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "SuisseIntlMono";
-  src: url("/fonts/SuisseIntlMono-Bold-WebS.woff2") format("woff2"),
-    url("/fonts/SuisseIntlMono-Bold-WebS.woff") format("woff"),
-    url("/fonts/SuisseIntlMono-Bold-WebS.ttf") format("tff");
+  font-family: "AkkuratMono";
+  src: url("/fonts/AkkuratMonoLLWeb-Bold.woff2") format("woff2"),
+    url("/fonts/AkkuratMonoLLWeb-Bold.woff") format("woff");
   font-weight: bold;
 }
