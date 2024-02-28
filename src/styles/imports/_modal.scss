@@ -79,10 +79,11 @@
     padding-left: 0;
 
     .hs-error-msg {
-      width: 60%;
       font-size: 0.6rem;
       margin: 0 auto;
       color: red;
+      width: 100%;
+      text-align: center;
     }
   }
 
