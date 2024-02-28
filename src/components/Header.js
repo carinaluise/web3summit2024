@@ -13,7 +13,6 @@ const Header = () => {
           </h1>
         </Link>
         <p className="header__date">AUGUST 19-21</p>
-        <p className="header__venue">FUNKHAUS</p>
         <p className="header__location">BERLIN</p>
       </article>
     </header>

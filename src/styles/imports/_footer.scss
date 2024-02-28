@@ -9,13 +9,16 @@
 
   a {
     color: $color-subtext;
-    text-decoration: underline;
     display: block;
     margin: 1.5rem auto;
 
     @media screen and (min-width: $size-sm) {
       display: inline;
       margin: 0 1rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 

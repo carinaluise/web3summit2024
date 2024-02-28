@@ -1,0 +1,157 @@
+.modal {
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 10000;
+  background-color: black;
+  margin: 5% auto;
+  width: 100%;
+  max-width: 90%;
+  padding: $margin;
+  height: 80vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+
+  @media screen and (min-width: $size-sm) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: $size-md) {
+    width: 40%;
+  }
+
+  @media screen and (min-width: $size-lg) {
+    width: 38%;
+  }
+}
+
+.hubspot-form {
+  max-width: 100%;
+  text-align: center;
+
+  h1 {
+    color: white;
+    margin: $margin-lg 0;
+  }
+
+  form {
+    margin: $margin-lg auto;
+    max-width: 100%;
+  }
+
+  .hs-form-field {
+    margin: $margin auto;
+    text-align: left;
+    max-width: 80%;
+  }
+
+  label {
+    color: white;
+  }
+
+  input,
+  select,
+  label {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 8px 4px;
+  }
+
+  .legal-consent-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+
+    .hs-richtext {
+      p {
+        margin: 0 auto;
+        font-size: 0.6rem;
+        color: gray;
+        text-align: left;
+        width: 80%;
+      }
+    }
+  }
+
+  ul.no-list.hs-error-msgs.inputs-list {
+    list-style-type: none;
+    margin-top: 4px;
+    padding-left: 0;
+
+    .hs-error-msg {
+      width: 60%;
+      font-size: 0.6rem;
+      margin: 0 auto;
+      color: red;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: 10%;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin: 1.5rem auto;
+    border: white 1px solid;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    width: 80%;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #424242aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  z-index: 10000;
+}
+
+.close-btn {
+  position: relative;
+  color: white;
+  left: 98%;
+  bottom: 1%;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: gray;
+  }
+}
+
+.submitted-message {
+  color: $color-text;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-open .modal {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.loading {
+  height: 80vh;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

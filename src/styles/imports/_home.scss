@@ -73,6 +73,25 @@
       color: $color-subtext;
     }
 
+    button {
+      background: none;
+      border: none;
+      color: $color-text;
+      display: block;
+      cursor: pointer;
+      text-align: center;
+      margin: 0.5rem 1rem;
+
+      @media screen and (min-width: $size-sm) {
+        margin: 0;
+        text-align: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     @media screen and (min-width: $size-sm) {
       flex-direction: row;
       gap: 2rem;
@@ -87,12 +106,15 @@
 
     a {
       display: block;
-      text-decoration: underline;
       margin: 0.5rem 1rem;
       text-align: left;
 
       @media screen and (min-width: $size-sm) {
         margin: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
