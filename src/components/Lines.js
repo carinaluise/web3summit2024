@@ -1,84 +1,97 @@
-import React, { useRef, useEffect, useState } from "react";
-import lineData from "../data/lineData";
+import React, { useEffect, useState } from "react";
+import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
+import Frame1 from "../images/frame-1.svg";
+import Frame2 from "../images/frame-2.svg";
 
 const Lines = () => {
-  const canvasRef = useRef(null);
-  const [lines, setLines] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const { scrollYProgress } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  const isWindowDefined = typeof window !== "undefined";
 
   useEffect(() => {
-    setLines(lineData.map((line) => ({ ...line, isVisible: false })));
-  }, [setLines]);
+    if (isWindowDefined) {
+      setIsMobile(window.innerWidth <= 790);
 
-  useEffect(() => {
-    const initialLoadInterval = startInitialLoadInterval();
-    const hideRandomLineInterval = startHideRandomLineInterval();
+      const handleMouseMove = (e) => {
+        x.set(e.pageX);
+        y.set(e.pageY);
+      };
 
-    return () => {
-      clearInterval(initialLoadInterval);
-      clearInterval(hideRandomLineInterval);
-    };
-  }, [lines, visibleCount]);
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 790);
+        if (isMobile) {
+          x.set(0);
+          y.set(0);
+        }
+      };
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-
-    drawLines(ctx);
-  }, [lines, visibleCount]);
-
-  const startInitialLoadInterval = () => {
-    return setInterval(() => {
-      setVisibleCount((prevCount) => {
-        if (prevCount < lines.length) {
-          const updatedLines = [...lines];
-          updatedLines[prevCount].isVisible = true;
-          setLines(updatedLines);
-          return prevCount + 1;
+      const addOrRemoveEventListener = () => {
+        if (isMobile) {
+          document.removeEventListener("mousemove", handleMouseMove);
         } else {
-          return prevCount;
+          document.addEventListener("mousemove", handleMouseMove);
         }
-      });
-    }, 25 - 2 * visibleCount);
-  };
+      };
 
-  const startHideRandomLineInterval = () => {
-    return setInterval(() => {
-      setLines((prevLines) => {
-        const updatedLines = prevLines.map((line) => ({
-          ...line,
-          isVisible: true,
-        }));
+      addOrRemoveEventListener();
+      window.addEventListener("resize", handleResize);
 
-        const randomIndex = Math.floor(Math.random() * updatedLines.length);
-        updatedLines[randomIndex].isVisible = false;
+      return () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [isMobile, x, y, isWindowDefined]);
 
-        return updatedLines;
-      });
-    }, 5000);
-  };
+  const translateYLayer1 = useTransform(
+    y,
+    [
+      0,
+      isWindowDefined ? window.innerHeight / 2 : 0,
+      isWindowDefined ? window.innerHeight - 100 : 0,
+    ],
+    [0, 10, 0]
+  );
 
-  const drawLines = (ctx) => {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  const translateYLayer2 = useTransform(
+    y,
+    [
+      0,
+      isWindowDefined ? window.innerHeight / 2 : 0,
+      isWindowDefined ? window.innerHeight - 100 : 0,
+    ],
+    [0, -10, 0]
+  );
 
-    lines
-      .slice(0, visibleCount)
-      .forEach(({ startX, startY, length, isVisible }) => {
-        if (isVisible) {
-          const y = Math.round(startY);
-          ctx.beginPath();
-          ctx.moveTo(startX, y);
-          ctx.lineTo(Math.round(startX + length), y);
-          ctx.strokeStyle = "white";
-          ctx.lineWidth = 0.6;
-          ctx.stroke();
-        }
-      });
-  };
+  const translateYLayer1Scroll = useTransform(
+    scrollYProgress,
+    [0.1, 0.5],
+    [0, -5]
+  );
+
+  const translateYLayer2Scroll = useTransform(
+    scrollYProgress,
+    [0.1, 0.5],
+    [0, 10]
+  );
 
   return (
-    <div className="canvas-container">
-      <canvas ref={canvasRef} width={1000} height={400} />
+    <div className="svg-container">
+      <motion.img
+        src={Frame1}
+        style={{
+          y: isMobile ? translateYLayer1Scroll : translateYLayer1,
+        }}
+      />
+      <motion.img
+        src={Frame2}
+        style={{
+          y: isMobile ? translateYLayer2Scroll : translateYLayer2,
+        }}
+      />
     </div>
   );
 };

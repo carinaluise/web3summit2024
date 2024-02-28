@@ -1,38 +1,37 @@
 .home {
   &__hero {
-    margin-top: 10vh;
-    @media screen and (min-width: $size-md) {
-      margin-top: 0;
+    margin: 20vh auto;
+    @media screen and (min-width: $size-sm) {
+      margin-top: 10vh;
+      width: 100%;
+      position: fixed;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
   &__title-container {
-    margin: 0 auto;
+    margin: 0 1rem;
     background-clip: text;
     -webkit-background-clip: text;
-    align-items: center;
-    padding: 2rem 2rem;
-    
-    
-    
+    max-width: 12rem;
+
     @media screen and (min-width: $size-xs) {
-      max-width: 35rem;
+      max-width: 18rem;
     }
-    
+
     @media screen and (min-width: $size-sm) {
+      margin: 0 auto;
+      width: 45rem;
       max-width: none;
       padding: 0;
-      width: 45rem;
-      position: fixed;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      top: 44%;
     }
-    
+
     @media screen and (min-width: $size-md) {
       //
     }
-    
+
     @media screen and (min-width: $size-lg) {
       //
     }
@@ -44,7 +43,8 @@
     padding-left: 0;
     line-height: 2rem;
     font-size: 1rem;
-    
+    z-index: -50;
+
     @media screen and (min-width: $size-xs) {
       line-height: 2.5rem;
       font-size: 1.5rem;
@@ -56,8 +56,6 @@
       margin: 0 auto;
     }
   }
-
-  
 
   &__cta {
     display: flex;
@@ -85,7 +83,6 @@
       max-width: none;
       border-bottom: none;
       padding-bottom: 0;
-
     }
 
     a {

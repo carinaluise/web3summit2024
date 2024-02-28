@@ -12,8 +12,9 @@ const Header = () => {
             2024
           </h1>
         </Link>
-        <p className="header__date">DATE</p>
-        <p className="header__location">LOCATION</p>
+        <p className="header__date">AUGUST 19-21</p>
+        <p className="header__venue">FUNKHAUS</p>
+        <p className="header__location">BERLIN</p>
       </article>
     </header>
   );

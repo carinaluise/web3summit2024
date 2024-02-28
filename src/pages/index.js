@@ -9,10 +9,7 @@ const HomePage = () => {
         <Lines />
         <div className="home__title-container">
           <h2 className="home__title">
-            Web3 Summit exists to facilitate a fully functional and
-            user-friendly
-            <br />
-            decentralized web.
+            Advancing a fully functional and user-friendly decentralized web
           </h2>
         </div>
       </div>
