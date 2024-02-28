@@ -3,11 +3,14 @@ import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ title, children }) => {
+const Layout = ({ children }) => {
   return (
     <div className="site">
       <Helmet>
-        <title>{title} | Web3 Summit 2018</title>
+        <title>
+          Web3 Summit 2024: Leading the Charge in Blockchain Evolution -
+          Connect, Innovate, Transform
+        </title>
       </Helmet>
       <Header />
       <main>{children}</main>
