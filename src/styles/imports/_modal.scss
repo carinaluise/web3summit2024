@@ -68,9 +68,13 @@
         font-size: 0.6rem;
         color: gray;
         text-align: left;
-        width: 80%;
+        width: 78%;
       }
     }
+  }
+
+  .hs-form-booleancheckbox-display {
+    padding: 0;
   }
 
   ul.no-list.hs-error-msgs.inputs-list {
@@ -88,7 +92,8 @@
   }
 
   input[type="checkbox"] {
-    width: 10%;
+    width: 5%;
+    margin-right: 0.5rem;
   }
 
   input[type="submit"] {
@@ -149,9 +154,17 @@ body.modal-open {
 }
 
 .loading {
-  height: 80vh;
+  height: 60vh;
   color: white;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitted-message {
+  height: 60vh;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
