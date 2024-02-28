@@ -1,14 +1,13 @@
 @font-face {
   font-family: "AkkuratMono";
-  src: url("/web3summit-2024/fonts/AkkuratMonoLLWeb-Regular.woff2")
-      format("woff2"),
-    url("/web3summit-2024/fonts/AkkuratMonoLLWeb-Regular.woff") format("woff");
+  src: url("/fonts/AkkuratMonoLLWeb-Regular.woff2") format("woff2"),
+    url("/fonts/AkkuratMonoLLWeb-Regular.woff") format("woff");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "AkkuratMono";
-  src: url("/web3summit-2024/fonts/AkkuratMonoLLWeb-Bold.woff2") format("woff2"),
-    url("/web3summit-2024/fonts/AkkuratMonoLLWeb-Bold.woff") format("woff");
+  src: url("/fonts/AkkuratMonoLLWeb-Bold.woff2") format("woff2"),
+    url("/fonts/AkkuratMonoLLWeb-Bold.woff") format("woff");
   font-weight: bold;
 }
