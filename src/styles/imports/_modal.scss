@@ -44,6 +44,10 @@
     max-width: 80%;
   }
 
+  .hs-richtext {
+    margin: 1rem 0;
+  }
+
   label {
     color: white;
   }
@@ -57,6 +61,16 @@
     padding: 8px 4px;
   }
 
+  select[name="hs_persona"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    appearance: none;
+    background-image: url(/images/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+  }
+
   .legal-consent-container {
     margin: 0 auto;
     width: 100%;
@@ -68,9 +82,14 @@
         font-size: 0.6rem;
         color: gray;
         text-align: left;
-        width: 80%;
+        max-width: 78%;
+        width: 45em;
       }
     }
+  }
+
+  .hs-form-booleancheckbox-display {
+    padding: 0;
   }
 
   ul.no-list.hs-error-msgs.inputs-list {
@@ -88,7 +107,8 @@
   }
 
   input[type="checkbox"] {
-    width: 10%;
+    width: 5%;
+    margin-right: 0.5rem;
   }
 
   input[type="submit"] {
@@ -120,10 +140,11 @@
 .close-btn {
   position: relative;
   color: white;
-  left: 98%;
-  bottom: 1%;
+  left: 95%;
+  top: 2.5%;
   background: none;
   border: none;
+  scale: 2;
   cursor: pointer;
 
   &:hover {
@@ -149,9 +170,17 @@ body.modal-open {
 }
 
 .loading {
-  height: 80vh;
+  height: 60vh;
   color: white;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitted-message {
+  height: 60vh;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -20,7 +20,6 @@ const Modal = ({ isOpen, closeModal }) => {
             <button className="close close-btn" onClick={closeModal}>
               &times;
             </button>
-            {/* HubSpot Form Code */}
             <div className="hubspot-form">
               <HubspotForm
                 className="modal"
