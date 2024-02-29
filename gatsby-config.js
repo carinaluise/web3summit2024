@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Web3 Summit 2024: Leading the Charge in Blockchain Evolution - Connect, Innovate, Transform`,
-    siteUrl: `https://2024.web3summit.com`,
+    siteUrl: `https://web3summit.com`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
