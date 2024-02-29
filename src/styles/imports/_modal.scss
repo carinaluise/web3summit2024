@@ -62,6 +62,9 @@
   }
 
   select[name="hs_persona"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     appearance: none;
     background-image: url(/images/chevron.svg);
     background-repeat: no-repeat;
