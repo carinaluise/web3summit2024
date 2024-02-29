@@ -44,6 +44,10 @@
     max-width: 80%;
   }
 
+  .hs-richtext {
+    margin: 1rem 0;
+  }
+
   label {
     color: white;
   }
@@ -68,7 +72,8 @@
         font-size: 0.6rem;
         color: gray;
         text-align: left;
-        width: 78%;
+        max-width: 78%;
+        width: 45em;
       }
     }
   }
@@ -125,10 +130,11 @@
 .close-btn {
   position: relative;
   color: white;
-  left: 98%;
-  bottom: 1%;
+  left: 95%;
+  top: 2.5%;
   background: none;
   border: none;
+  scale: 2;
   cursor: pointer;
 
   &:hover {
