@@ -61,6 +61,16 @@
     padding: 8px 4px;
   }
 
+  select[name="hs_persona"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    appearance: none;
+    background-image: url(/images/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+  }
+
   .legal-consent-container {
     margin: 0 auto;
     width: 100%;
