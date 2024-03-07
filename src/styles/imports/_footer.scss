@@ -1,9 +1,10 @@
 .footer {
   text-align: center;
   font-size: 0.8rem;
-
+  padding-bottom: 4rem;
   @media screen and (min-width: $size-sm) {
     font-size: 0.7rem;
+    padding-bottom: 0;
   }
 
   a {

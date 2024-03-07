@@ -1,15 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
-import FAQ from "../components/FAQ";
 
-const FAQPage = () => {
+const ProgramPage = () => {
   return (
     <Layout>
-      <div className="faq">
-        <FAQ />
+      <div className="program">
+        <h2>Program</h2>
       </div>
     </Layout>
   );
 };
 
-export default FAQPage;
+export default ProgramPage;

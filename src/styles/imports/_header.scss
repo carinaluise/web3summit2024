@@ -1,14 +1,12 @@
 .header {
+  z-index: 5000;
   margin: 1.2rem;
-
+  color: $color-subtext;
   @media screen and (min-width: $size-sm) {
     margin: 0;
   }
 
   @media screen and (min-width: $size-md) {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
   }
 
   @media screen and (min-width: $size-lg) {
@@ -47,5 +45,33 @@
   &__title {
     mix-blend-mode: difference;
     margin-top: 0;
+    position: sticky;
+    top: $margin;
+    left: $margin;
+  }
+
+  ul {
+    margin-top: 2rem;
+    list-style-type: none;
+
+    li {
+      margin: 0.5rem 0;
+
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: $color-text;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 }

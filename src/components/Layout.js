@@ -5,11 +5,6 @@ import Footer from "./Footer";
 import Modal from "./Modal";
 
 const Layout = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
   return (
     <div className="site">
       <Helmet>
@@ -53,30 +48,26 @@ const Layout = ({ children }) => {
           content="https://web3summit.com/meta/web3summit_2024_berlin.png"
         />
       </Helmet>
-      <Header />
-      <main>{children}</main>
-      <article className="cta">
-        <p>
-          <a href="/">Tickets</a>
+      <div className="site__columns">
+        <Header />
+        <main>{children}</main>
+        <article className="cta">
+          <p>
+            <a
+              target="_blank"
+              rel="noreferrer noopenner"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe5X9pYNbSKFBJ-Rpis9Li4xqLnlIN1-iHNDOWAwb03qhx6_w/viewform?usp=sf_link"
+            >
+              Submit
+            </a>
+            a proposal
+          </p>
+          <p className="cta__tickets">
+            <a href="/">Tickets</a>
+          </p>
           <br />
-        </p>
-        <p>
-          <button onClick={openModal}>Sign up</button>
-          for updates
-        </p>
-        <p>
-          <a
-            target="_blank"
-            rel="noreferrer noopenner"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe5X9pYNbSKFBJ-Rpis9Li4xqLnlIN1-iHNDOWAwb03qhx6_w/viewform?usp=sf_link"
-          >
-            Submit
-          </a>
-          a proposal
-        </p>
-      </article>
-      <Modal isOpen={isOpen} closeModal={() => setIsOpen(false)} />
-
+        </article>
+      </div>
       <Footer />
     </div>
   );

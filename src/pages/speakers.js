@@ -2,14 +2,14 @@ import React from "react";
 import Layout from "../components/Layout";
 import FAQ from "../components/FAQ";
 
-const FAQPage = () => {
+const SpeakersPage = () => {
   return (
     <Layout>
-      <div className="faq">
-        <FAQ />
+      <div className="speakers">
+        <h2>Speakers</h2>
       </div>
     </Layout>
   );
 };
 
-export default FAQPage;
+export default SpeakersPage;
