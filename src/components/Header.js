@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import Modal from "./Modal";
 
@@ -24,22 +24,22 @@ const Header = () => {
       </article>
       <ul>
         <li>
-          <Link href="/about">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link href="/program">Program</Link>
+          <Link to="/program">Program</Link>
         </li>
         <li>
-          <Link href="/speakers">Speakers</Link>
+          <Link to="/speakers">Speakers</Link>
         </li>
         <li>
-          <Link href="/get-involved">Get Involved</Link>
+          <Link to="/get-involved">Get Involved</Link>
         </li>
         <li>
-          <Link href="/faq">FAQ</Link>
+          <Link to="/faq">FAQ</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
           <button onClick={openModal}>Sign up</button>

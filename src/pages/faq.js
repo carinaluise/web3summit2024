@@ -4,10 +4,8 @@ import FAQ from "../components/FAQ";
 
 const FAQPage = () => {
   return (
-    <Layout>
-      <div className="faq">
-        <FAQ />
-      </div>
+    <Layout page="faq">
+      <FAQ />
     </Layout>
   );
 };

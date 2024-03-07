@@ -4,10 +4,8 @@ import FAQ from "../components/FAQ";
 
 const SpeakersPage = () => {
   return (
-    <Layout>
-      <div className="speakers">
-        <h2>Speakers</h2>
-      </div>
+    <Layout page="speakers">
+      <h2>Speakers</h2>
     </Layout>
   );
 };

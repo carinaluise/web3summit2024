@@ -40,3 +40,7 @@ p {
   font-size: $font-size;
   color: $color-text;
 }
+
+[aria-current="page"] {
+  text-decoration: underline;
+}

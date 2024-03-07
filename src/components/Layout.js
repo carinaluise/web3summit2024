@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
-import Modal from "./Modal";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
   return (
     <div className="site">
       <Helmet>
@@ -50,7 +49,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <div className="site__columns">
         <Header />
-        <main>{children}</main>
+        <main className={page}>{children}</main>
         <article className="cta">
           <p>
             <a
