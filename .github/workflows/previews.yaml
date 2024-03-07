@@ -49,3 +49,15 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
+
+  # Deployment job: 
+  deploy:
+    environment:
+      name: surge
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Install surge globally
+        run: yarn install -g surge
+      - name: Deploy to Surge.sh
+        run: surge ./public ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
