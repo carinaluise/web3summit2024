@@ -10,6 +10,8 @@ defaults:
 jobs:
   # Build job
   build:
+    environment:
+      name: surge
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
