@@ -58,6 +58,6 @@ jobs:
     needs: build
     steps:
       - name: Install surge globally
-        run: yarn install -g surge
+        run: yarn global add surge
       - name: Deploy to Surge.sh
         run: surge ./public ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
