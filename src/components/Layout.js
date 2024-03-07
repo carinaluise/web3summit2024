@@ -1,9 +1,15 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
+import Modal from "./Modal";
 
 const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
   return (
     <div className="site">
       <Helmet>
@@ -49,6 +55,28 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header />
       <main>{children}</main>
+      <article className="cta">
+        <p>
+          <a href="/">Tickets</a>
+          <br />
+        </p>
+        <p>
+          <button onClick={openModal}>Sign up</button>
+          for updates
+        </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noreferrer noopenner"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe5X9pYNbSKFBJ-Rpis9Li4xqLnlIN1-iHNDOWAwb03qhx6_w/viewform?usp=sf_link"
+          >
+            Submit
+          </a>
+          a proposal
+        </p>
+      </article>
+      <Modal isOpen={isOpen} closeModal={() => setIsOpen(false)} />
+
       <Footer />
     </div>
   );

@@ -1,0 +1,51 @@
+.faq {
+  margin-bottom: $margin-lg;
+  p {
+    color: $color-subtext;
+    transition: opacity 0.3s ease, height 0.3s ease;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+  }
+
+  @media screen and (min-width: $size-sm) {
+    width: 60vw;
+  }
+
+  @media screen and (min-width: $size-md) {
+    width: 35vw;
+  }
+
+  ul {
+    margin-left: $margin;
+  }
+
+  li {
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+
+  li.open p {
+    opacity: 1;
+    height: auto;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  li::marker {
+    color: white;
+    content: "+ ";
+  }
+
+  li.open::marker {
+    content: "- ";
+  }
+
+  h2 {
+    color: white;
+    margin-bottom: $margin;
+    font-size: 1rem;
+  }
+}
