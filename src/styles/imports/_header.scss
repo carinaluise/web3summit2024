@@ -2,14 +2,8 @@
   z-index: 5000;
   margin: 1.2rem;
   color: $color-subtext;
-  @media screen and (min-width: $size-sm) {
-    margin: 0;
-  }
-
   @media screen and (min-width: $size-md) {
-  }
-
-  @media screen and (min-width: $size-lg) {
+    margin: 0;
   }
 
   h1 {
@@ -26,6 +20,12 @@
 
   p {
     margin-bottom: 0;
+  }
+
+  &__info {
+    [aria-current="page"] {
+      text-decoration: none;
+    }
   }
 
   &__date,
@@ -45,7 +45,6 @@
   &__title {
     mix-blend-mode: difference;
     margin-top: 0;
-    position: sticky;
     top: $margin;
     left: $margin;
   }

@@ -64,7 +64,6 @@ const Layout = ({ children, page }) => {
           <p className="cta__tickets">
             <a href="/">Tickets</a>
           </p>
-          <br />
         </article>
       </div>
       <Footer />

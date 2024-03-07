@@ -8,8 +8,10 @@
     display: flex;
     min-height: 92vh;
 
-    @media screen and (min-width: $size-sm) {
-      flex-direction: row;
+    @media screen and (min-width: $size-md) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
       gap: $margin;
       padding: $padding-lg;
     }
@@ -20,20 +22,18 @@
     margin: $margin;
     height: 100%;
 
-    @media screen and (min-width: $size-sm) {
+    @media screen and (min-width: $size-md) {
       margin: 0;
       margin-top: $margin;
     }
 
     @media screen and (min-width: $size-md) {
-      display: flex;
-      justify-content: center;
       margin-top: 0;
     }
-  }
-  h2 {
-    color: white;
-    margin: 0 auto;
+
+    h2 {
+      color: white;
+    }
   }
 
   .cta {
@@ -46,7 +46,13 @@
     padding-bottom: 5rem;
 
     @media screen and (min-width: $size-sm) {
+      padding-bottom: 2rem;
+      margin-top: 20rem;
+    }
+
+    @media screen and (min-width: $size-md) {
       flex-direction: row;
+      justify-content: end;
       gap: 2rem;
       margin: 0;
       right: $margin-lg;
