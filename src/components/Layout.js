@@ -3,7 +3,11 @@ import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import { urls } from "../config/site";
+
 const Layout = ({ children, page }) => {
+  const { tickets, submitForm } = urls;
+
   return (
     <div className="site">
       <Helmet>
@@ -50,21 +54,24 @@ const Layout = ({ children, page }) => {
       <div className="site__columns">
         <Header />
         <main className={page}>{children}</main>
-        <article className="cta">
-          <p>
-            <a
-              target="_blank"
-              rel="noreferrer noopenner"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe5X9pYNbSKFBJ-Rpis9Li4xqLnlIN1-iHNDOWAwb03qhx6_w/viewform?usp=sf_link"
-            >
+        <div className="cta">
+          <div className="cta__submit">
+            <a target="_blank" rel="noreferrer noopenner" href={submitForm}>
               Submit
             </a>
             a proposal
-          </p>
-          <p className="cta__tickets">
-            <a href="/">Tickets</a>
-          </p>
-        </article>
+          </div>
+          <div className="cta__tickets">
+            <a
+              href={tickets}
+              target="_blank"
+              className="button"
+              rel="noreferrer noopenner"
+            >
+              Tickets
+            </a>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

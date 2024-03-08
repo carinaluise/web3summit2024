@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const FAQ = () => {
-  const [openIndexes, setOpenIndexes] = useState([]);
+  const [openIndexes, setOpenIndexes] = useState([0]);
 
   const toggleDropdown = (index) => {
     if (openIndexes.includes(index)) {
@@ -20,7 +20,7 @@ const FAQ = () => {
       {faqData.map((item, index) => (
         <li key={index} className={isOpen(index) ? "open" : ""}>
           <h3 onClick={() => toggleDropdown(index)}>{item.question}</h3>
-          {isOpen(index) && <p>{item.answer}</p>}
+          <p>{item.answer}</p>
         </li>
       ))}
     </ul>
@@ -28,6 +28,11 @@ const FAQ = () => {
 };
 
 const faqData = [
+  {
+    question: "What is Web3 Summit?",
+    answer:
+      "Web3 Summit is an open and collaborative space where the community can create their own programming. Web3 Foundation invites a full line up of high quality speakers, while individuals, teams and projects use the rest of the space for workshops, presentations, AMA sessions – both intimate and large-scale, chilling, and most importantly, hacking. There will always be a large room dedicated to a hackerspace, where you can host a meetup or hackathon, whiteboard some ideas, present to other teams, and get real work done. This is your Summit, so program it how you want!",
+  },
   {
     question: "Where is Web3 Summit?",
     answer:

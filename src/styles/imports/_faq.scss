@@ -1,20 +1,23 @@
 .faq {
-  margin-top: 2rem;
+  // margin-top: 2rem;
   margin-bottom: $margin-lg;
+  
   p {
     color: $color-subtext;
     transition: opacity 0.3s ease, height 0.3s ease;
-    opacity: 0;
-    overflow: hidden;
-    height: 0;
+    display: none;
+  }
+
+  li.open p {
+    display: block;
   }
 
   @media screen and (min-width: $size-sm) {
-    width: 60vw;
+    // width: 60vw;
   }
 
   @media screen and (min-width: $size-md) {
-    width: 35vw;
+    // width: 35vw;
   }
 
   ul {
@@ -26,10 +29,7 @@
     transition: background-color 0.3s ease;
   }
 
-  li.open p {
-    opacity: 1;
-    height: auto;
-  }
+  
 
   li:hover {
     cursor: pointer;

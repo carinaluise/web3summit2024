@@ -1,22 +1,36 @@
 .header {
-  z-index: 5000;
-  margin: 1.2rem;
+  z-index: 20;
   color: $color-subtext;
-  @media screen and (min-width: $size-md) {
+  width: 100%;
+  min-width: 10rem;
+  
+  @media screen and (min-width: $size-sm) {
     margin: 0;
+    padding-top: $padding-lg * 2;
   }
 
-  h1 {
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: normal;
-    margin-bottom: 0.8rem;
+  &__title {
+    margin-top: 0;
+    top: $margin;
+    left: $margin;
 
-    @media screen and (min-width: $size-sm) {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: normal;
+      margin: 0 0 0.8rem;
+  
+      @media screen and (min-width: $size-sm) {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        margin: 0;
+        position: fixed;
+        top: $padding-lg;
+      }
     }
   }
+
+  
 
   p {
     margin-bottom: 0;
@@ -40,13 +54,6 @@
       font-size: 1rem;
       line-height: 1.2rem;
     }
-  }
-
-  &__title {
-    mix-blend-mode: difference;
-    margin-top: 0;
-    top: $margin;
-    left: $margin;
   }
 
   ul {

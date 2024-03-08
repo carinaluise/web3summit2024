@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__web3summit">
+      <div className="footer__primary">
         <a
           target="_blank"
           rel="noreferrer noopener"
@@ -20,22 +20,23 @@ const Footer = () => {
           2018
         </a>
       </div>
-      <span>-</span>
-      <a
-        target="_blank"
-        rel="noreferrer noopener"
-        href="https://web3.foundation/legal-disclosures/"
-      >
-        Legal Disclosures
-      </a>
-      <span>-</span>
-      <a
-        target="_blank"
-        rel="noreferrer noopener"
-        href="https://web3.foundation/privacy-and-cookies/"
-      >
-        Privacy and Cookies
-      </a>
+      <div className="footer__secondary">
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://web3.foundation/legal-disclosures/"
+        >
+          Legal Disclosures
+        </a>
+        <span>&mdash;</span>
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://web3.foundation/privacy-and-cookies/"
+        >
+          Privacy and Cookies
+        </a>
+      </div>
     </footer>
   );
 };

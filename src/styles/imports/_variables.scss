@@ -3,16 +3,18 @@ $font-family: "AkkuratMono", monospace;
 $line-height: 1.125rem; // 16/100*1.125 = 18
 
 $color-text: white;
+$color-dark: black;
 $color-anchor: white;
-$color-subtext: #666;
+$color-subtext: #757575;
 
 $gap-width: 1.375rem; // 16/100*1.375 = 22
-$gap-width-sm: calc($gap-width / 2);
+$gap-width-sm: calc($gap-width * 1.4);
 $gap-width-lg: calc($gap-width * 2);
 
 $margin: $gap-width;
 $margin-sm: $gap-width-sm;
 $margin-lg: $gap-width-lg;
+
 $padding: $gap-width;
 $padding-sm: $gap-width-sm;
 $padding-lg: $gap-width-lg;

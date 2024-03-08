@@ -1,6 +1,6 @@
 .home {
   &__hero {
-    margin: 20vh auto;
+    margin: 16vh auto;
 
     @media screen and (min-width: $size-sm) {
       margin-top: 20vh;
@@ -10,6 +10,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    
     @media screen and (min-width: $size-md) {
       margin-top: 10vh;
       width: 100%;
