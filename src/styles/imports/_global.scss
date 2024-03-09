@@ -75,3 +75,20 @@ p {
     color: $color-dark;
   }
 }
+
+// SCROLL transition
+
+.site:not(.page-home) {
+  @media screen and (min-width: $size-sm) and (min-height: 400px) {
+    .header__info, .header__nav, .cta__submit {
+      transition: opacity 0.6s ease-in-out;
+    }
+    
+    &.scrolled {
+      & .header__info,  & .header__nav, & .cta__submit {
+        opacity: 0;
+      }
+    }
+  }
+}
+

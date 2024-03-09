@@ -14,6 +14,16 @@
     top: $margin;
     left: $margin;
 
+    a {
+      text-decoration: none !important;
+    }
+
+    @media screen and (min-width: $size-sm) {
+      position: fixed;
+      top: $padding-lg;
+      left: $padding-lg;
+    }
+
     h1 {
       font-size: 2rem;
       line-height: 2rem;
@@ -24,13 +34,10 @@
         font-size: 1.6rem;
         line-height: 1.6rem;
         margin: 0;
-        position: fixed;
-        top: $padding-lg;
+        
       }
     }
   }
-
-  
 
   p {
     margin-bottom: 0;
@@ -40,21 +47,22 @@
     [aria-current="page"] {
       text-decoration: none;
     }
-  }
-
-  &__date,
-  &__location,
-  &__venue {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    font-weight: normal;
-    color: $color-subtext;
-
-    @media screen and (min-width: $size-sm) {
-      font-size: 1rem;
-      line-height: 1.2rem;
+    
+    &__date,
+    &__location,
+    &__venue {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      font-weight: normal;
+      color: $color-subtext;
+  
+      @media screen and (min-width: $size-sm) {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
     }
   }
+
 
   ul {
     margin-top: 2rem;

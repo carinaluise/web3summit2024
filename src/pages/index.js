@@ -4,7 +4,7 @@ import Lines from "../components/Lines";
 
 const HomePage = () => {
   return (
-    <Layout className="home">
+    <Layout className="home" page="home">
       <div className="home__hero">
         <Lines />
         <div className="home__title-container">
