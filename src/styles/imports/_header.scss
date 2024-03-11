@@ -1,23 +1,41 @@
 .header {
-  margin: 1.2rem;
-
+  z-index: 20;
+  color: $color-subtext;
+  width: 100%;
+  min-width: 10rem;
+  
   @media screen and (min-width: $size-sm) {
     margin: 0;
-  }
-  @media screen and (min-width: $size-md) {
-    display: flex;
-    justify-content: space-between;
+    padding-top: $padding-lg * 2;
   }
 
-  h1 {
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: normal;
-    margin-bottom: 0.8rem;
+  &__title {
+    margin-top: 0;
+    top: $margin;
+    left: $margin;
+
+    a {
+      text-decoration: none !important;
+    }
 
     @media screen and (min-width: $size-sm) {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
+      position: fixed;
+      top: $padding-lg;
+      left: $padding-lg;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: normal;
+      margin: 0 0 0.8rem;
+  
+      @media screen and (min-width: $size-sm) {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        margin: 0;
+        
+      }
     }
   }
 
@@ -25,22 +43,49 @@
     margin-bottom: 0;
   }
 
-  &__date,
-  &__location,
-  &__venue {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    font-weight: normal;
-    color: $color-subtext;
-
-    @media screen and (min-width: $size-sm) {
-      font-size: 1rem;
-      line-height: 1.2rem;
+  &__info {
+    [aria-current="page"] {
+      text-decoration: none;
+    }
+    
+    &__date,
+    &__location,
+    &__venue {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      font-weight: normal;
+      color: $color-subtext;
+  
+      @media screen and (min-width: $size-sm) {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
     }
   }
 
-  &__title {
-    mix-blend-mode: difference;
-    margin-top: 0;
+
+  ul {
+    margin-top: 2rem;
+    list-style-type: none;
+
+    li {
+      margin: 0.5rem 0;
+
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: $color-text;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 }

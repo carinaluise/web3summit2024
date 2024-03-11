@@ -1,11 +1,12 @@
 .footer {
   text-align: center;
-  padding-bottom: 4rem;
   font-size: 0.8rem;
-
-  @media screen and (min-width: $size-sm) {
-    padding-bottom: 0rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  
+  @media screen and (min-width: $size-md) {
     font-size: 0.7rem;
+    padding-bottom: 4rem;
   }
 
   a {
@@ -32,11 +33,12 @@
     }
   }
 
-  &__web3summit {
-    display: inline;
+  &__primary {
+    padding-bottom: 0.5rem;
 
     a {
       display: inline;
+      color: $color-text;
 
       &:first-child {
         margin-right: 0;

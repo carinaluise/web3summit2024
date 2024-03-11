@@ -1,11 +1,18 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+import { urls } from "../config/site";
+import useScroll from "../hooks/useScroll";
+
+const Layout = ({ children, page }) => {
+  const { tickets, submitForm } = urls;
+
+  const isScrolled = useScroll();
+
   return (
-    <div className="site">
+    <>
       <Helmet>
         <title>
           Web3 Summit 2024: Leading the Charge in Blockchain Evolution -
@@ -47,10 +54,33 @@ const Layout = ({ children }) => {
           content="https://web3summit.com/meta/web3summit_2024_berlin.png"
         />
       </Helmet>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+
+      <div className={`site page-${page} ${isScrolled ? "scrolled" : ""}`}>
+        <div className="site__columns">
+          <Header />
+          <main>{children}</main>
+          <div className="cta">
+            <div className="cta__submit">
+              <a target="_blank" rel="noreferrer noopenner" href={submitForm}>
+                Submit
+              </a>
+              a proposal
+            </div>
+            <div className="cta__tickets">
+              <a
+                href={tickets}
+                target="_blank"
+                className="button"
+                rel="noreferrer noopenner"
+              >
+                Tickets
+              </a>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

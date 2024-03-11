@@ -1,22 +1,94 @@
 .site {
-  padding: $padding-sm;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  min-height: 100vh;
   
-  @media screen and (min-width: $size-sm) {
-    padding: $padding-lg;
+  &__columns {
+    padding: $padding-sm;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    display: flex;
+    
+    @media screen and (min-width: $size-sm) {
+      min-height: 84vh;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: $margin;
+      padding: $padding-lg;
+    }
   }
 
   main {
     flex-grow: 1;
+    height: 100%;
+    padding-top: $padding-lg;
+
+    & h2, h3, h4, p {
+      max-width: 720px;
+    }
+
+    @media screen and (min-width: $size-sm) {
+      grid-column: span 3;
+      margin-top: 0;
+      padding: ($padding-lg * 3.55) 0;
+    }
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto;
+    line-height: 1.2rem;
+    max-width: 14rem;
+    border-bottom: solid 1px $color-subtext;
+    padding-bottom: 5rem;
+
+    @media screen and (min-width: $size-sm) {
+      position: fixed;
+      top: $padding-lg;
+      right: $padding-lg;
+      border-bottom: none;
+      flex-direction: row;
+      margin: 0;
+      z-index: 30;
+    }
+
+    &__submit {
+      margin-right: 0;
+      text-align: center;
+      order: 2;
+      color: $color-subtext;
+      
+      @media screen and (min-width: $size-sm) {
+        order: 0;
+        text-align: left;
+        margin-right: $margin-lg;
+      }
+    }
     
-    @media screen and (min-width: $size-md) {
-      display: flex;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
+    &__tickets {
+      margin-bottom: $margin-lg;
+      order: 1;
+      display: inline-block;
+    }
+
+    a {
+      font-size: 1rem;
+      display: block;
+      margin: 0.5rem 0.5rem;
+
+      @media screen and (min-width: $size-sm) {
+        font-size: $font-size;
+        margin: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

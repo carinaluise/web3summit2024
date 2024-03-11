@@ -7,15 +7,13 @@
   left: -10%;
 
   @media screen and (min-width: $size-sm) {
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80rem;
+    position: fixed;
+    top: -40%;
   }
 
   @media screen and (min-width: $size-md) {
     top: 70%;
-    left: 55%;
+    left: 53%;
     transform: translate(-50%, -50%);
     width: 70rem;
   }

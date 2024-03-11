@@ -13,7 +13,7 @@ const Lines = () => {
 
   useEffect(() => {
     if (isWindowDefined) {
-      setIsMobile(window.innerWidth <= 790);
+      setIsMobile(window.innerWidth <= 1090);
 
       const handleMouseMove = (e) => {
         x.set(e.pageX);
@@ -21,7 +21,7 @@ const Lines = () => {
       };
 
       const handleResize = () => {
-        setIsMobile(window.innerWidth <= 790);
+        setIsMobile(window.innerWidth <= 1090);
         if (isMobile) {
           x.set(0);
           y.set(0);

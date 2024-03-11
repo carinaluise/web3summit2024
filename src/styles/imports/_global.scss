@@ -16,28 +16,93 @@ body {
   font-size: $font-size;
   line-height: $line-height;
   background-color: black;
-  // height: 100vh;
 }
 
-
-body, html {
+body,
+html {
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  // overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: $color-anchor;
-  word-break: break-all;
-}
 
+h2,
 h3,
 h4,
 p {
   margin: 0;
   margin-bottom: $margin;
   font-size: $font-size;
+  line-height: $line-height * 1.2;
   color: $color-text;
 }
+
+h4 {
+  margin-bottom: 0;
+  color: $color-subtext;
+}
+
+[aria-current="page"] {
+  text-decoration: underline;
+}
+
+b {
+  font-weight: bold;
+}
+
+
+// LINKS
+
+a {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-anchor;
+  word-break: break-all;
+
+  &.external-link {
+    margin-right: 15px;
+    &::after {
+      content: "↗";
+      position: absolute;
+      right: -15px;
+    }
+  }
+}
+
+p {
+  a {
+    text-decoration: underline;
+  }
+}
+
+.button {
+  border: solid 1px $color-subtext;
+  background: $color-dark;
+  padding: 0.8rem;
+  text-decoration: none;
+  transition: background 0.1s ease-in-out;
+  
+  &:hover {
+    text-decoration: none !important;
+    background: white;
+    color: $color-dark;
+  }
+}
+
+// SCROLL transition
+
+.site:not(.page-home) {
+  @media screen and (min-width: $size-sm) and (min-height: 400px) {
+    .header__info, .header__nav, .cta__submit {
+      transition: opacity 0.6s ease-in-out;
+    }
+    
+    &.scrolled {
+      & .header__info,  & .header__nav, & .cta__submit {
+        opacity: 0;
+      }
+    }
+  }
+}
+
