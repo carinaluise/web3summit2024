@@ -3,18 +3,19 @@ import Layout from "../components/Layout";
 
 import { urls } from "../config/site";
 
-const GetInvolvedPage = () => {
+const VolunteerPage = () => {
   const { volunteerForm } = urls;
 
   return (
-    <Layout page="get-involved">
+    <Layout page="volunteer">
       <p>
         <a href={volunteerForm} target="_blank" rel="noreferrer noopenner">
-          Volunteer at the Web3 Summit
-        </a>
+          Volunteer
+        </a>{" "}
+        at the Web3 Summit
       </p>
     </Layout>
   );
 };
 
-export default GetInvolvedPage;
+export default VolunteerPage;

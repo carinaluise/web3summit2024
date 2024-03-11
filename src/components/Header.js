@@ -38,7 +38,7 @@ const Header = () => {
             <Link to="/speakers">Speakers</Link>
           </li>
           <li>
-            <Link to="/get-involved">Get involved</Link>
+            <Link to="/volunteer">Volunteer</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -47,8 +47,13 @@ const Header = () => {
             <button onClick={openModal}>Sign up</button>
           </li>
           <li>
-            <a href={tickets} target="_blank" rel="noreferrer noopenner">
-              Tickets &rarr;
+            <a
+              href={tickets}
+              target="_blank"
+              rel="noreferrer noopenner"
+              className="external-link"
+            >
+              Tickets
             </a>
           </li>
         </ul>

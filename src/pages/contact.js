@@ -5,13 +5,18 @@ const ContactPage = () => {
   return (
     <Layout page="contact">
       <h4>General</h4>
+
       <p>
-        <a href="#">contact@web3summit.com</a>
+        <a href="mailto:contact@web3summit.com" target="_blank">
+          contact@web3summit.com
+        </a>
       </p>
 
       <h4>Press</h4>
       <p>
-        <a href="#">press@web3summit.com</a>
+        <a href="mailto:press@web3summit.com" target="_blank">
+          press@web3summit.com
+        </a>
       </p>
 
       <p>

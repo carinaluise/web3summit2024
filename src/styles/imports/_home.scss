@@ -42,7 +42,7 @@
   &__title {
     font-weight: normal;
     color: white;
-    opacity: 0.5;
+    color: $color-subtext !important;
     padding-left: 0;
     line-height: 2.4rem;
     font-size: 1.4rem;
@@ -58,8 +58,6 @@
       line-height: 2.6rem;
       font-size: 2rem;
       margin: 0 auto;
-      color: $color-subtext;
-      opacity: 1;
     }
   }
 }

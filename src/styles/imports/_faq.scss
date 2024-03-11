@@ -2,13 +2,28 @@
   // margin-top: 2rem;
   margin-bottom: $margin-lg;
   
-  p {
-    color: $color-subtext;
+  .faq-content {
     transition: opacity 0.3s ease, height 0.3s ease;
     display: none;
+    
+    p {
+      color: $color-subtext;
+
+        a {
+          color: $color-subtext;
+
+          &:visited, &:hover {
+            color: $color-subtext;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
   }
 
-  li.open p {
+  li.open .faq-content {
     display: block;
   }
 
@@ -25,14 +40,15 @@
   }
 
   li {
-    user-select: none;
     transition: background-color 0.3s ease;
   }
-
   
+  li h3 {
+    user-select: none;
 
-  li:hover {
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   li::marker {
@@ -44,9 +60,4 @@
     content: "- ";
   }
 
-  //   h2 {
-  //     color: white;
-  //     margin-bottom: $margin;
-  //     font-size: 1rem;
-  //   }
 }

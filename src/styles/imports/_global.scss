@@ -46,14 +46,28 @@ h4 {
   text-decoration: underline;
 }
 
+b {
+  font-weight: bold;
+}
+
 
 // LINKS
 
 a {
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   color: $color-anchor;
   word-break: break-all;
+
+  &.external-link {
+    margin-right: 15px;
+    &::after {
+      content: "↗";
+      position: absolute;
+      right: -15px;
+    }
+  }
 }
 
 p {
