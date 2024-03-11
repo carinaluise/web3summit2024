@@ -1,26 +1,27 @@
 .faq {
   // margin-top: 2rem;
   margin-bottom: $margin-lg;
-  
+
   .faq-content {
     transition: opacity 0.3s ease, height 0.3s ease;
     display: none;
-    
+
     p {
       color: $color-subtext;
 
-        a {
+      a {
+        color: $color-subtext;
+
+        &:visited,
+        &:hover {
           color: $color-subtext;
+        }
 
-          &:visited, &:hover {
-            color: $color-subtext;
-          }
-
-          &:hover {
-            text-decoration: none;
-          }
+        &:hover {
+          text-decoration: none;
         }
       }
+    }
   }
 
   li.open .faq-content {
@@ -40,9 +41,16 @@
   }
 
   li {
+    list-style-type: "+";
     transition: background-color 0.3s ease;
+    padding-left: 1rem;
+    color: white;
   }
-  
+
+  li.open {
+    list-style-type: "-";
+  }
+
   li h3 {
     user-select: none;
 
@@ -50,14 +58,4 @@
       cursor: pointer;
     }
   }
-
-  li::marker {
-    color: white;
-    content: "+ ";
-  }
-
-  li.open::marker {
-    content: "- ";
-  }
-
 }
