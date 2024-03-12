@@ -1,13 +1,13 @@
 .site {
   min-height: 100vh;
-  
+
   &__columns {
     padding: $padding-sm;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     display: flex;
-    
+
     @media screen and (min-width: $size-sm) {
       min-height: 84vh;
       display: grid;
@@ -23,7 +23,10 @@
     height: 100%;
     padding-top: $padding-lg;
 
-    & h2, h3, h4, p {
+    & h2,
+    h3,
+    h4,
+    p {
       max-width: 720px;
     }
 
@@ -54,7 +57,6 @@
       border-bottom: none;
       flex-direction: row;
       margin: 0;
-      z-index: 30;
     }
 
     &__submit {
@@ -62,14 +64,14 @@
       text-align: center;
       order: 2;
       color: $color-subtext;
-      
+
       @media screen and (min-width: $size-sm) {
         order: 0;
         text-align: left;
         margin-right: $margin-lg;
       }
     }
-    
+
     &__tickets {
       margin-bottom: $margin-lg;
       order: 1;
