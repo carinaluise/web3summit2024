@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { urls } from "../config/site";
+
 const FAQ = () => {
   const [openIndexes, setOpenIndexes] = useState([0]);
 
@@ -30,6 +32,8 @@ const FAQ = () => {
   );
 };
 
+const { volunteerForm } = urls;
+
 const faqData = [
   {
     question: "What is Web3 Summit?",
@@ -40,6 +44,10 @@ const faqData = [
     question: "Where is Web3 Summit?",
     answer:
       "<p>Web3 Summit will take place in Berlin, Germany. We’ll be announcing the venue shortly.</p>",
+  },
+  {
+    question: "How can I contribute to Web3 Summit?",
+    answer: `<p>On the homepage you can submit a talk or workshop proposal. The deadline for submission is May 17, 2024.</p><p>If you would like to volunteer please fill-out this <a href='${volunteerForm}' target='_blank' rel='rel noopener noreferrer'>form</a>.</p><p>More details to follow on other ways to participate including hosting your own node, creative installations, and more.</p>`,
   },
   {
     question: "Where to stay in Berlin?",
