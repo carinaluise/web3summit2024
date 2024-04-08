@@ -71,7 +71,7 @@ const faqData = [
       "<p>Yes, there will be a livestream of all talks on the main stage in Studio 1, with a link available on our website. There will also be video recording taking place throughout other sites in the venue.</p>",
   },
   {
-    question: "Will there be free Wifi at Funkhaus?",
+    question: "Will there be free Wifi at the venue?",
     answer: "<p>Yes</p>",
   },
   {
