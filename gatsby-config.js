@@ -28,6 +28,13 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-simple-analytics",
       options: {
         domain: "apisa.web3.foundation",

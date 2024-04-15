@@ -1,0 +1,38 @@
+.speakers-page-header {
+    margin-bottom: $margin-lg * 1.5;
+
+    h2 {
+        margin-bottom: 0;
+    }
+    
+    p {
+        margin-bottom: $margin-lg;
+    }
+}
+
+.speakers {
+    max-width: 580px;
+    
+    @media screen and (min-width: $size-sm) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.speaker {
+    margin-bottom: $margin-sm;
+    list-style-type: none;
+    
+    @media screen and (min-width: $size-sm) {
+        width: 50%;
+    }
+    
+    
+    &__name {
+        margin-bottom: 0.4rem;
+    }
+
+    &__company {
+        color: $color-subtext;
+    }
+}
