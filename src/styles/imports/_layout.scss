@@ -94,3 +94,15 @@
     }
   }
 }
+
+.page-header {
+  margin-bottom: $margin-lg * 1.5;
+
+  h2 {
+      margin-bottom: 0;
+  }
+  
+  p {
+      margin-bottom: $margin-lg;
+  }
+}

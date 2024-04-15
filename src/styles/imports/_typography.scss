@@ -11,3 +11,7 @@
     url("/fonts/AkkuratMonoLLWeb-Bold.woff") format("woff");
   font-weight: bold;
 }
+
+.text-dark {
+  color: $color-subtext;
+}
