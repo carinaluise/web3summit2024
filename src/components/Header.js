@@ -27,7 +27,7 @@ const Header = () => {
       </div>
       <div className="header__info">
         <p className="header__info__date">AUGUST 19-21</p>
-        <p className="header__info__location">BERLIN</p>
+        <p className="header__info__location">FUNKHAUS BERLIN</p>
       </div>
       <nav class="header__nav">
         <ul>

@@ -32,7 +32,7 @@ const FAQ = () => {
   );
 };
 
-const { volunteerForm } = urls;
+const { submitForm } = urls;
 
 const faqData = [
   {
@@ -43,11 +43,16 @@ const faqData = [
   {
     question: "Where is Web3 Summit?",
     answer:
-      "<p>Web3 Summit will take place in Berlin, Germany. We’ll be announcing the venue shortly.</p>",
+      "<p>Web3 Summit will take place at Funkhaus Berlin <br />(Nalepastr. 18, 12459 Berlin, Germany)</p> <p>Funkhaus Berlin is located in the eastern part of Berlin, specifically in the district of Rummelsburg. Funkhaus Berlin is a historic building complex that was once the headquarters of the East German broadcasting corporation. It is situated along the banks of the River Spree, providing a picturesque setting for the Web3 Summit. Funkhaus Berlin is renowned for its unique architecture and its significance in Berlin's cultural scene, serving as a hub for music production, recording studios, live performances, and events.</p>",
+  },
+  {
+    question: "How to get to the Web3 Summit?",
+    answer:
+      "<p>From the main train station in Berlin (Berlin Hauptbahnhof), you can reach Funkhaus Berlin using public transportation:</p><p>- Take the S-Bahn (S5, S7, or S75): Take any of the S-Bahn lines S5 (towards Strausberg Nord), S7 (towards Ahrensfelde), or S75 (towards Wartenberg) heading eastbound. Ride the S-Bahn to the Ostkreuz station.</p><p>- At Ostkreuz station, take tram 21 heading eastbound (direction S Köpenick) to Köpenicker Chaussee/Blockdammweg. From there it is about a 7 minute walk until you reach Funkhaus Berlin.</p><p>We recommend travelling to Funkhaus Berlin with public transport! There is a limited number of parking spots for those travelling by car.</p>",
   },
   {
     question: "How can I contribute to Web3 Summit?",
-    answer: `<p>On the homepage you can submit a talk or workshop proposal. The deadline for submission is May 17, 2024.</p><p>If you would like to volunteer please fill-out this <a href='${volunteerForm}' target='_blank' rel='rel noopener noreferrer'>form</a>.</p><p>More details to follow on other ways to participate including hosting your own node, creative installations, and more.</p>`,
+    answer: `<p>You can submit a talk or workshop proposal following this <a href='${submitForm}' target="_blank" rel="noopener noreferrer">link</a>. The deadline for submission is May 17, 2024.</p><p>If you would like to volunteer please follow this <a href='/volunteer/'>link</a>.</p><p>More details to follow on other ways to participate including hosting your own node, creative installations, and more.</p>`,
   },
   {
     question: "Where to stay in Berlin?",
@@ -77,7 +82,7 @@ const faqData = [
   {
     question: "How can I volunteer?",
     answer:
-      "<p>Volunteers at Web3 Summit will receive free entry to the conference, food and drinks on the day of the assignment and a Web3 Summit T-Shirt! The volunteer assignment is 8 hours. Need more info? Email us on <a href='mailto:volunteer@web3summit.com' target='_blank'>volunteer@web3summit.com</a>. Looking forward to having you on board!</p>",
+      "<p>Volunteers at Web3 Summit will receive free entry to the conference, food and drinks on the day of the assignment and a Web3 Summit T-Shirt! The volunteer assignment is a minimum of 8 hours. Need more info? Click <a href='/volunteer/'>here</a>.</p>",
   },
   {
     question: "What are the different tickets available?",
