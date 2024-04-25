@@ -31,10 +31,6 @@ const NodespacePage = () => {
         ideas come to life in the Nodespace! Thank you for your contribution to
         the Web3 Summit.
       </p>
-      <p className="text-dark">
-        We can't wait to see your ideas come to life in the Nodespace! Thank you
-        for your contribution to the Web3 Summit.
-      </p>
       <p>
         <a
           href={nodespaceForm}
@@ -42,7 +38,7 @@ const NodespacePage = () => {
           rel="noreferrer noopenner"
           className="link-cta external-link"
         >
-          Apply to NodeSpace
+          Apply to Nodespace
         </a>
       </p>
     </Layout>
