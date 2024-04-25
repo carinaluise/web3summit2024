@@ -40,26 +40,25 @@ const VolunteerPage = () => {
       </p>
 
       <p>
-        Submission:
-        <br />
-        <span className="text-dark">
-          If you would like to volunteer at Web3 Summit, please fill out this
-        </span>{" "}
-        <a href={volunteerForm} target="_blank" rel="noreferrer noopenner">
-          form
-        </a>
-        .
-      </p>
-
-      <p>
         Deadline to submit the form:
         <br />
         <span className="text-dark">May 17, 2024</span>
       </p>
 
-      <p>
+      <p className="text-dark">
         We thank you in advance for your assistance at the Summit and are
         looking forward to seeing you there for three unforgettable days!{" "}
+      </p>
+
+      <p>
+        <a
+          href={volunteerForm}
+          target="_blank"
+          rel="noreferrer noopenner"
+          className="link-cta external-link"
+        >
+          Volunteer at Web3 Summit
+        </a>
       </p>
     </Layout>
   );
