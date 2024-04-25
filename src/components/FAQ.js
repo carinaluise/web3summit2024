@@ -32,7 +32,7 @@ const FAQ = () => {
   );
 };
 
-const { submitForm } = urls;
+const { submitForm, nodespaceForm } = urls;
 
 const faqData = [
   {
@@ -52,8 +52,17 @@ const faqData = [
   },
   {
     question: "How can I contribute to Web3 Summit?",
-    answer: `<p>You can submit a talk or workshop proposal following this <a href='${submitForm}' target="_blank" rel="noopener noreferrer">link</a>. The deadline for submission is May 17, 2024.</p><p>If you would like to volunteer please follow this <a href='/volunteer/'>link</a>.</p><p>More details to follow on other ways to participate including hosting your own node, creative installations, and more.</p>`,
+    answer: `<p>You can submit a talk or workshop proposal following this <a href='${submitForm}' target="_blank" rel="noopener noreferrer">link</a>. The deadline for submission is May 17, 2024.</p>
+    
+    <p>Showcase your projects, host discussions, and engage with the Web3 community in your own dedicated space. To learn more follow this <a href='${nodespaceForm}' target="_blank" rel="noopener noreferrer">link</a>.</p>
+
+    <p>In addition, an entire hall has been dedicated to host community-led hackerspaces. This dynamic space is open 24/7 throughout the Summit, offering a staggering 58 hours of uninterrupted hacking time. It's your chance to dive deep into your projects, collaborate with fellow innovators, and turn your visions into reality.</p>
+    
+    <p>If you would like to volunteer please follow this <a href='/volunteer/'>link</a>.</p>
+    
+    <p>More details to follow on other ways to participate including community creative installations.</p>`,
   },
+
   {
     question: "Where to stay in Berlin?",
     answer:
