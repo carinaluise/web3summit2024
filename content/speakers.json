@@ -1,16 +1,16 @@
 {
     "speakers": [
       {
-        "name": "TBD",
-        "company": "W3S"
+        "name": "Billy Rennekamp",
+        "company": "1KX"
       },
       {
-        "name": "TBD",
-        "company": "W3F"
+        "name": "Jonathan Levin",
+        "company": "Chainalysis"
       },
       {
-        "name": "TBD",
-        "company": "W3S"
+        "name": "Gavin Wood",
+        "company": "Polkadot"
       }
     ]
   }
