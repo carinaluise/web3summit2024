@@ -111,7 +111,7 @@ const faqData = [
   {
     question: "Sponsorship",
     answer:
-      "<p>Web3 Summit will have no sponsorships. As part of the no-sponsorship policy, we will not support any form of advertising, including logo placement or preferential provision of speaker slots.</p><p>However, we will accept scholarship contributions, which will be used to finance tickets for participants who would otherwise not be able to afford the full ticket price.</p><p>With gratitude for your generosity in making a contribution, and in proportion to the quantity of tickets your contribution subsidizes, we may be able to offer free tickets to your company in order to attend Web3 Summit. If you or your organization is interested in making a contribution, please contact us on <a href='mailto:contact@web3summit.com' target='_blank'>contact@web3summit.com</a>.</p>",
+      "<p>Web3 Summit will have no sponsorships. As part of the no-sponsorship policy, we will not support any form of advertising, including logo placement or preferential provision of speaker slots.</p><p>However, we will accept scholarship contributions, which will be used to finance tickets for participants who would otherwise not be able to afford the full ticket price.</p><p>If you or your organization is interested in making a contribution, please contact us on <a href='mailto:contact@web3summit.com' target='_blank'>contact@web3summit.com</a>.</p>",
   },
 ];
 
