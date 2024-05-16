@@ -1,16 +1,16 @@
 {
     "speakers": [
       {
-        "name": "Billy Rennekamp",
-        "company": "1KX"
+        "name": "Yeho Wang",
+        "company": "Consensys"
       },
       {
         "name": "Jonathan Levin",
         "company": "Chainalysis"
       },
       {
-        "name": "Gavin Wood",
-        "company": "Polkadot"
+        "name": "Billy Rennekamp",
+        "company": "1KX"
       }
     ]
   }
