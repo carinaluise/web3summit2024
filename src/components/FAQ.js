@@ -52,7 +52,7 @@ const faqData = [
   },
   {
     question: "How can I contribute to Web3 Summit?",
-    answer: `<p>You can submit a talk or workshop proposal following this <a href='${submitForm}' target="_blank" rel="noopener noreferrer">link</a>. The deadline for submission is May 17, 2024.</p>
+    answer: `<p>You can submit a talk or workshop proposal following this <a href='${submitForm}' target="_blank" rel="noopener noreferrer">link</a>. The deadline for submission is May 24th, 2024.</p>
     
     <p>Showcase your projects, host discussions, and engage with the Web3 community in your own dedicated space. To learn more follow this <a href='${nodespaceForm}' target="_blank" rel="noopener noreferrer">link</a>.</p>
 
