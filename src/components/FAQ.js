@@ -89,11 +89,6 @@ const faqData = [
     answer: "<p>Yes</p>",
   },
   {
-    question: "How can I volunteer?",
-    answer:
-      "<p>Volunteers at Web3 Summit will receive free entry to the conference, food and drinks on the day of the assignment and a Web3 Summit T-Shirt! The volunteer assignment is a minimum of 8 hours. Need more info? Click <a href='/volunteer/'>here</a>.</p>",
-  },
-  {
     question: "What are the different tickets available?",
     answer:
       "<p>The Web3 Summit offers two types of tickets: Early Adopter and General Admission, designed to accommodate different participants' needs and ensure a diverse, inclusive community.</p><p><b>Early adopter:</b> These are limited and aimed at those who are quick to support the event. They are likely to sell out fast and are meant for individuals who are keen on being part of the Summit from an early stage.</p><p><b>General Admission:</b> These tickets are intended for individuals who work for well-funded organizations and projects. The pricing and structure of General Admission tickets are designed to reflect the financial capacity of participants from more established entities. This category helps balance the economic spectrum of attendees, ensuring that the event remains accessible to a wider audience while also securing funds necessary for the Summit's success.</p><p>Our partner Tito will provide you with an invoice for each purchase. Please follow our Twitter for updates.</p>",
