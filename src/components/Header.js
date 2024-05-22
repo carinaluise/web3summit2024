@@ -41,13 +41,7 @@ const Header = () => {
             <Link to="/nodespace">Nodespace</Link>
           </li>
           <li>
-            <Link to="/volunteer">Volunteer</Link>
-          </li>
-          <li>
             <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <button onClick={openModal}>Sign up</button>
           </li>
           <li>
             <a
