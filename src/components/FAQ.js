@@ -32,7 +32,7 @@ const FAQ = () => {
   );
 };
 
-const { submitForm, nodespaceForm } = urls;
+const { submitForm, nodespaceForm, volunteerForm } = urls;
 
 const faqData = [
   {
@@ -58,7 +58,7 @@ const faqData = [
 
     <p>In addition, an entire hall has been dedicated to host community-led hackerspaces. This dynamic space is open 24/7 throughout the Summit, offering a staggering 58 hours of uninterrupted hacking time. It's your chance to dive deep into your projects, collaborate with fellow innovators, and turn your visions into reality.</p>
     
-    <p>If you would like to volunteer please follow this <a href='/volunteer/'>link</a>.</p>
+    <p>If you would like to volunteer please follow this <a href='${volunteerForm}' target="_blank" rel="noopener noreferrer">link</a>.</p>
     
     <p>More details to follow on other ways to participate including community creative installations.</p>`,
   },
